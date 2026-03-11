@@ -14,4 +14,4 @@ while True:
 
     requests.post(url, data=data)
 
-    time.sleep(6000)  # 60 minutes
+    time.sleep(3600)  # 60 minutes
