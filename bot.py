@@ -1,8 +1,17 @@
-import os
-from telegram import Bot
+import requests
+import time
 
-TOKEN = os.getenv("TELEGRAM_TOKEN")  # récupère ton token depuis Railway
-CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")  # ton chat ID
+TOKEN = "8301048438:AAEUyBVAC3rCYACcfkUYY4GBhpp7kOSVHBs"
+CHAT_ID = "6898691256"
 
-bot = Bot(token=TOKEN)
-bot.send_message(chat_id=CHAT_ID, text="Test Telegram !")
+while True:
+    url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
+    
+    data = {
+        "chat_id": CHAT_ID,
+        "text": "Bot actif"
+    }
+
+    requests.post(url, data=data)
+
+    time.sleep(100)  # 5 minutes
