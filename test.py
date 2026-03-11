@@ -1,6 +1,6 @@
 from telegram import Bot
 
-TOKEN = "TON_TOKEN_ICI"
+TOKEN = "8301048438:AAEUyBVAC3rCYACcfkUYY4GBhpp7kOSVHBs"
 CHAT_ID = 6898691256  # ton vrai chat ID
 
 bot = Bot(token=TOKEN)
